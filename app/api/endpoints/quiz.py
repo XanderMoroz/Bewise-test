@@ -14,11 +14,11 @@ router = APIRouter()
 @router.post("/questions", response_model=Union[List[QuizResponse], List])
 def create_question(questions_num: int, db: Session = Depends(get_db)):
     """
-    Create a new question.
+    **Create a new question.**
 
-    :param questions_num: The number of unique questions to create.
-    :param db: The database session.
-    :return: List of newly created questions or an empty list if no data is available.
+    - :param **questions_num:** The number of unique questions to create.
+    - :param **db:** The database session.
+    - :return: List of newly created questions or an empty list if no data is available.
     """
     data = take_unique_questions(questions_num)
 
