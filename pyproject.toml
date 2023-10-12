@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "bewise-test"
+version = "0.1.0"
+description = "Решение тестового задания для Bewise.io"
+authors = ["xander <moroz070688@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bewise_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.2"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+sqlalchemy = "^2.0.21"
+pydantic-settings = "^2.0.3"
+requests = "^2.31.0"
+psycopg2-binary = "^2.9.9"
+alembic = "^1.12.0"
+sqlalchemy-utils = "^0.41.1"
+pre-commit = "^3.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
